@@ -1,0 +1,80 @@
+{% extends 'baseapp.html' %}
+
+{% block content %}
+<div class="form-reset3">
+<form method="post" id="MemberForm" data-models-url="{% url 'predcar:ajax_load_models' %}"  class="form-horizontal" role="form"   >
+    <hr class="my-4">
+    {% csrf_token %}
+<h4 class="text-center"> Wypełnij formularz, a dowiesz się ile kosztuje poszukiwane przez Ciebie Auto</h4>    
+<div class="row">
+    <div class="col">
+        <label>Marka</label>
+        {{ form.mark}}
+      </div>
+          <div class="col">
+            <label>Model </label>
+            {{ form.model }}
+          </div>
+          
+          
+        </div>
+
+        <div class="row">
+            <div class="col">
+              <label>Rok produkcji</label>
+              {{ form.year }}
+            </div>
+            <div class="col">
+              <label>Przebieg <small>(max 2mln km)</small></label>
+              {{ form.mileage}}
+            </div>
+    
+          </div>
+
+           <div class="row">
+            <div class="col">
+              <label>Silnik</label>
+              {{ form.fuel }}
+            </div>
+            <div class="col">
+              <label>Pojemność <small>(500cm3 - 5000cm3)</small></label>
+              {{ form.vol_engine}}
+            </div>
+            
+          </div>
+
+           
+          <div class="row">
+            <div class="col">
+              <label>Województwo</label>
+              {{ form.province }}
+            </div>
+            <div class="col">
+            </div>
+            
+          </div> <hr class="my-4">
+          <input  type="submit" value="Predykcja" class="btn btn-dark">
+
+
+          <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+          <script>
+              $("#id_mark").change(function () {
+              const url = $("#MemberForm").attr("data-models-url");  
+                 const markId = $(this).val();  
+       
+               $.ajax({                       
+                   url: url,                    
+                  data: {
+                      'mark_id': markId       
+                  },
+                  success: function (data) {   
+                      $("#id_model").html(data); 
+                   }
+              });
+       
+              });
+                  </script>
+      </form>
+    </div>
+     
+{% endblock %}

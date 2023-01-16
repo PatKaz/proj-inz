@@ -1,0 +1,48 @@
+{% extends 'baseapp.html' %}
+
+{% block content %}
+<h4 class="titlee text-center">Regulamin Aplikacji</h4>
+<hr class="my-4">
+            
+
+            <form method="POST" action class="form-box px-3">
+                {% csrf_token %}
+                <div class="text-left mb-2">
+                 <small>  1. Wstęp<br>
+                   <p>Niniejszy Regulamin określa zasady korzystania z aplikacji PredApp oraz obowiązki użytkowników i właściciela aplikacji. Regulamin jest integralną częścią umowy pomiędzy użytkownikiem a właścicielem aplikacji.</p> 
+
+                  2. Definicje <br>
+
+ - Aplikacja: oznacza aplikację PredApp oraz wszystkie jej funkcjonalności i usługi dostępne za pośrednictwem aplikacji.<br>
+ - Użytkownik: oznacza osobę fizyczną lub prawną korzystającą z aplikacji.<br>
+ <p>- Właściciel aplikacji: oznacza osobę fizyczną lub prawną posiadającą prawa do aplikacji.</p>
+3. Zasady korzystania z aplikacji<br>
+ - Użytkownik ma prawo korzystać z aplikacji zgodnie z jej przeznaczeniem i zasadami określonymi w regulaminie.<br>
+ - Użytkownik zobowiązuje się do niepodejmowania działań mających na celu naruszenie praw właściciela aplikacji lub osób trzecich.<br>
+ - Użytkownik zobowiązuje się do niepodejmowania działań mających na celu wyłudzenie lub uzyskanie nieuprawnionego dostępu do danych osobowych lub innych danych użytkowników aplikacji.<br>
+ <p>- Właściciel aplikacji zastrzega sobie prawo do usunięcia lub zablokowania dostępu użytkownika do aplikacji w przypadku naruszenia zasad określonych w regulaminie lub obowiązującym prawie.</p>
+ 4. Odpowiedzialność<br>     
+ - Użytkownik ponosi pełną odpowiedzialność za treści, które publikują w aplikacji lub przekazują osobom trzecim za pośrednictwem aplikacji.<br>
+ - Właściciel aplikacji nie ponosi odpowiedzialności za treści publikowane przez użytkowników, chyba że właściciel aplikacji miał wiedzę o ich nielegalności i nie podjął działań mających na celu usunięcie takich treści.<br>
+ - Właściciel aplikacji nie ponosi odpowiedzialności za szkody powstałe w wyniku korzystania lub niemożności korzystania z aplikacji.<br>
+ - Właściciel aplikacji zastrzega sobie prawo do wprowadzania zmian w aplikacji oraz jej funkcjonalności bez uprzedniego powiadomienia użytkowników.<br>
+ - Właściciel aplikacji zastrzega sobie prawo do usunięcia lub zablokowania dostępu użytkownika do aplikacji w przypadku naruszenia zasad określonych w regulaminie lub obowiązującym prawie.
+</small>     
+                </div>
+
+
+              
+                  <hr class="my-4">
+                  <div class="text-center mb-2">Nie posiadasz jeszcze konta?
+                    <a href="{% url 'register' %}">Zarejestruj tutaj</a>
+                  </div>
+                  <div class="text-center mb-2">Posiadasz konto?
+                    <a href="{% url 'login' %}">Przejdż do logowania</a>
+                  </div>
+    
+            </form>
+
+
+
+
+{% endblock %}

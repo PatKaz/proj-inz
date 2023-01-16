@@ -1,0 +1,220 @@
+
+{% extends 'baseapp.html' %}
+
+{% block content %}
+<hr class="my-4">
+<div class="row ac">
+    <div class="col">
+        Metraż: <strong>{{ house.area }} </strong>
+      </div>
+      <div class="col">
+        Liczba pokoi:<strong> {{ house.room_num }} </strong>
+      </div>
+      <div class="col">
+        Piętro mieszkania: <strong>{{ house.floor }} </strong>
+      </div>
+    </div>
+
+    <div class="row ac">
+        <div class="col">
+            Liczba pięter budynku: <strong>{{ house.total_floor }} </strong>
+          </div>
+          <div class="col">
+            Rok budowy:<strong> {{ house.year_built }} </strong>
+          </div>
+          <div class="col">
+            Zmywarka:
+            <strong>  {% if house.dish_washer == 0 %}
+                Nie 
+            {% elif  house.dish_washer  == 1 %}
+                Tak
+                {% endif %}  </strong>
+          </div>
+        </div>
+    
+
+        <div class="row ac">
+            <div class="col">
+                Ogród:
+                <strong>       {% if house.garden == 0 %}
+                    Nie 
+                {% elif  house.garden  == 1 %}
+                    Tak
+                    {% endif %}   </strong>
+              </div>
+              <div class="col">
+                                Telewizor:
+                                <strong> {% if house.tv_set == 0 %}
+                    Nie 
+                {% elif  house.tv_set  == 1 %}
+                    Tak
+                    {% endif %}  </strong>
+              </div>
+              <div class="col">
+                
+                    Pralka:
+                    <strong>   {% if house.washer == 0 %}
+                        Nie 
+                    {% elif  house.washer  == 1 %}
+                        Tak
+                    {% endif %} </strong>
+              </div>
+            </div>
+        
+
+
+        <div class="row ac">
+            <div class="col">
+                Balkon:
+                <strong>  {% if house.balcony == 0 %}
+                    Nie 
+                {% elif  house.balcony  == 1 %}
+                    Tak
+                    {% endif %} </strong>
+              </div>
+              <div class="col">
+                Piwnica:
+                <strong>  {% if house.basement == 0 %}
+                    Nie 
+                {% elif  house.basement  == 1 %}
+                    Tak
+                    {% endif %} </strong>
+              </div>
+              <div class="col">
+                Winda:
+                <strong>  {% if house.elevator == 0 %}
+                    Nie 
+                {% elif  house.elevator  == 1 %}
+                    Tak
+                    {% endif %} </strong>
+                 
+              </div>
+            </div>
+        
+
+
+
+        <div class="row ac">
+            <div class="col">
+                Zmywarka:
+                <strong>      {% if house.dish_washer == 0 %}
+                    Nie 
+                {% elif  house.dish_washer  == 1 %}
+                    Tak
+                    {% endif %} </strong>
+              </div>
+              <div class="col">
+                                Telewizor:
+                                <strong> {% if house.tv_set == 0 %}
+                    Nie 
+                {% elif  house.tv_set  == 1 %}
+                    Tak
+                    {% endif %} </strong>
+              </div>
+              <div class="col">
+                
+                    Pralka:
+                    <strong>     {% if house.washer == 0 %}
+                        Nie 
+                    {% elif  house.washer  == 1 %}
+                        Tak
+                    {% endif %} </strong>
+              </div>
+            </div>
+        
+
+
+        <div class="row ac">
+            <div class="col">
+                Internet:
+                <strong>  {% if house.internet == 0 %}
+                    Nie 
+                {% elif  house.internet  == 1 %}
+                    Tak
+                    {% endif %} </strong>
+              </div>
+              <div class="col">
+                Dla studentów:
+                <strong>{% if house.available_for_students == 0 %}
+                        Nie 
+                    {% elif  house.available_for_students  == 1 %}
+                        Tak
+                        {% endif %} </strong>
+              </div>
+              <div class="col">
+                 Mieszkanie dwupoziomowe:
+                 <strong> {% if house.two_level == 0 %}
+                        Nie 
+                    {% elif  house.two_level  == 1 %}
+                        Tak
+                        {% endif %} </strong>
+                 
+              </div>
+            </div>
+        
+
+        <div class="row ac">
+            <div class="col">
+                Internet:
+                <strong> {% if house.internet == 0 %}
+                    Nie 
+                {% elif  house.internet  == 1 %}
+                    Tak
+                    {% endif %} </strong>
+              </div>
+              <div class="col">
+                
+                Dzielnica:
+                <strong>
+                {% if  house.district  == 1 %}
+                Bemowo
+                {% elif  house.district  == 2 %}
+                Białołęka
+                {% elif  house.district  == 3 %}
+                Bielany
+                {% elif  house.district  == 4 %}
+                Centrum
+                {% elif house.district == 5 %}
+                Mokotów
+                {% elif  house.district  == 6 %}
+                Ochota
+                {% elif  house.district  == 7 %}
+                Praga-Południe
+                {% elif  house.district  == 8 %}
+                Praga-Północ
+                {% elif house.district == 9 %}
+                Targówek
+                {% elif  house.district  == 10 %}
+                Ursus
+                {% elif  house.district  == 11 %}
+                Ursynów
+                {% elif  house.district  == 12 %}
+                Wawer
+                {% elif  house.district  == 13 %}
+                Wilanów
+                {% elif  house.district  == 14 %}
+                Wola
+                {% elif  house.district  == 15 %}
+                Włochy
+                {% elif  house.district  == 16 %}
+                Śródmieście
+                {% elif  house.district  == 17 %}
+                Żoliborz
+                {% endif %}</strong>
+            </div>
+                <div class="col">
+                   
+                  </div>
+
+              
+             
+            </div>
+        
+
+            <hr class="my-4">
+
+<p></p><h3 class="text-center">Przewidywana cena poszukiwanego mieszkania wynosi<h2 class="text-center"><strong> {{ status }} zł</strong></h2> </h3>
+
+
+<hr class="my-4">
+{% endblock %}

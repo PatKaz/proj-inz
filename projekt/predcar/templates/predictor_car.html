@@ -1,0 +1,93 @@
+
+{% extends 'baseapp.html' %}
+
+{% block content %}
+<hr class="my-4">
+<h4>
+<div class="row ac">
+<div class="col">
+    Marka:<strong> {{ mark }}</strong>
+  </div>
+  <div class="col">
+    Model:<strong>  {{ model }}</strong>
+  </div>
+  <div class="col">
+    Rok produkcji: <strong> {{ car.year }}</strong>
+  </div>
+</div>
+<div class="row ac">
+<div class="col">
+    Przebieg: <strong> {{ car.mileage }} km</strong> 
+  </div>
+  <div class="col">
+    Slinik:<strong> 
+{% if car.fuel == 0 %}
+    Diesel
+{% elif  car.fuel  == 1 %}
+Elektryczny
+{% elif  car.fuel  == 2 %}
+    Benzyna
+{% elif  car.fuel  == 3 %}
+Hybryda
+{% elif  car.fuel  == 4 %}
+LPG
+{% endif %}</strong>
+  </div>
+  <div class="col">
+    Pojemność:<strong>  {{ car.vol_engine }} cm3</strong> 
+  </div>
+</div>
+<div class="row ac">
+<div class="col">
+    Województwo :<strong> 
+{% if car.province == 0 %}
+    Dolnośląskie
+{% elif  car.province  == 1 %}
+    Kujawsko-pomorskie
+{% elif  car.province  == 2 %}
+    Lubelskie
+{% elif  car.province  == 3 %}
+Lubuskie
+{% elif  car.province  == 4 %}
+Mazowieckie
+{% elif car.province == 5 %}
+    Małopolskie
+{% elif  car.province  == 6 %}
+    Opolskie
+{% elif  car.province  == 7 %}
+    Podkarpackie
+{% elif  car.province  == 8 %}
+Podlaskie
+{% elif  car.province  == 9 %}
+Pomorskie
+{% elif car.province == 10 %}
+    Warmińsko-mazurskie
+{% elif  car.province  == 11 %}
+    Wielkopolskie
+{% elif  car.province  == 12 %}
+    Zachodniopomorskie
+{% elif  car.province  == 13 %}
+Łódzkie
+{% elif  car.province  == 14 %}
+Śląskie
+{% elif  car.province  == 15 %}
+Świętokrzyskie
+{% endif %}<strong> 
+  
+  <div class="col">
+    
+  </div>
+</div>
+</h4>
+
+
+</div>
+
+
+
+<hr class="my-4">
+<p></p><h3 class="text-center">Przewidywana cena poszukiwanego samochodu wynosi: <h2 class="text-center"><strong>{{ stat }} zł</strong></h2> </h3>
+
+
+
+{% endblock %}

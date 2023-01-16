@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+           
+{% if user.is_authenticated %}
+
+<hr class="my-4">
+<form method="POST" action class="form-box px-3">
+              
+
+<div class="text-center">
+  <h4>Witaj w PredApp</h4>
+  <hr class="my-4">
+  <p>Dzięki urzyciu aplikacji możesz przewidywać ceny. </p><p>Pamiętaj aby wprowadzać watrości istniejącego produktu,<br> która pozwoli prawidłowo zasymulować cenę.</p>
+    <p>Którą cene chcesz poznac? </p>
+<div class="mb-2">
+  <button type="submit" class="btn  btn-block text-uppercase">
+      <a  class="btn btn-dark"  href="{% url 'predcar:add' %}">Ceny samochodów</a>
+  </button>
+  <div class="mb-2">
+    <button type="submit" class="btn  btn-block text-uppercase">
+        <a  class="btn btn-dark" href="{% url 'predhouse:add' %}">Ceny mieszkań</a>
+    </button>
+
+
+
+
+</div>
+
+<hr class="my-4">
+</form>
+
+
+
+
+
+{% endif %}
+
+
+    {% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'baseapp.html' %}
+
+{% block content %}
+<h4 class="titlee text-center">Regulamin Aplikacji</h4>
+<hr class="my-4">
+            
+
+            <form method="POST" action class="form-box px-3">
+                {% csrf_token %}
+                <div class="text-left mb-2">
+                 <small>  1. Wstęp<br>
+                   <p>Niniejsza Polityka Prywatności określa zasady przetwarzania danych osobowych użytkowników aplikacji PredApp oraz ich prawa związane z ochroną prywatności.</p>
+                  2. Definicje <br>
+                   - Aplikacja: oznacza aplikację PredApp oraz wszystkie jej funkcjonalności i usługi dostępne za pośrednictwem aplikacji.<br>
+                   - Użytkownik: oznacza osobę fizyczną lub prawną korzystającą z aplikacji.<br>
+ - Właściciel aplikacji: oznacza osobę fizyczną lub prawną posiadającą prawa do aplikacji<br>
+ - Dane osobowe: oznaczają wszelkie informacje dotyczące zidentyfikowanej lub możliwej do zidentyfikowania osoby fizycznej.</p>
+3. Przetwarzanie danych osobowych<br>
+ - Właściciel aplikacji przetwarza dane osobowe użytkowników wyłącznie w celu świadczenia usług za pośrednictwem aplikacji oraz w celach analitycznych i statystycznych.<br>
+ - Użytkownik ma prawo dostępu do swoich danych osobowych oraz ich poprawiania lub usuwania.<br>
+ - Właściciel aplikacji zobowiązuje się do ochrony danych osobowych użytkowników zgodnie z obowiązującymi przepisami o ochronie danych osobowych.<br>
+ - Właściciel aplikacji może udostępniać dane osobowe użytkowników podmiotom trzecim wyłącznie w celu świadczenia usług za pośrednictwem aplikacji oraz w celach analitycznych i statystycznych.<br>
+ - Właściciel aplikacji zastrzega sobie prawo do zmiany Polityki Prywatności w dowolnym czasie, z zachowaniem obowiązujących przepisów o ochronie danych osobowych.<br>
+</small>     
+                </div>
+
+
+              
+                  <hr class="my-4">
+                  <div class="text-center mb-2">Nie posiadasz jeszcze konta?
+                    <a href="{% url 'register' %}">Zarejestruj tutaj</a>
+                  </div>
+                  <div class="text-center mb-2">Posiadasz konto?
+                    <a href="{% url 'login' %}">Przejdż do logowania</a>
+                  </div>
+    
+            </form>
+
+
+
+
+{% endblock %}

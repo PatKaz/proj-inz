@@ -1,0 +1,169 @@
+[{
+    "model": "predcar.Mark",
+    "pk": 1,
+    "fields": {
+        "name": "Alfa-romeo"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 2,
+    "fields": {
+        "name": "Audi"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 3,
+    "fields": {
+        "name": "Bmw"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 4,
+    "fields": {
+        "name": "Chevrolet"
+    }
+},
+
+{
+    "model": "predcar.Mark",
+    "pk": 5,
+    "fields": {
+        "name": "Citroen"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 6,
+    "fields": {
+        "name": "Fiat"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 7,
+    "fields": {
+        "name": "Ford"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 8,
+    "fields": {
+        "name": "Honda"
+    }
+},
+
+{
+    "model": "predcar.Mark",
+    "pk": 9,
+    "fields": {
+        "name": "Hyundai"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 10,
+    "fields": {
+        "name": "Kia"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 11,
+    "fields": {
+        "name": "Mazda"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 12,
+    "fields": {
+        "name": "Mercedes-benz"
+    }
+},
+
+{
+    "model": "predcar.Mark",
+    "pk": 13,
+    "fields": {
+        "name": "Mini"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 14,
+    "fields": {
+        "name": "Mitsubishi"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 15,
+    "fields": {
+        "name": "Nissan"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 16,
+    "fields": {
+        "name": "Opel"
+    }
+},
+
+{
+    "model": "predcar.Mark",
+    "pk": 17,
+    "fields": {
+        "name": "Peugeot"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 18,
+    "fields": {
+        "name": "Renault"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 19,
+    "fields": {
+        "name": "Seat"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 20,
+    "fields": {
+        "name": "Skoda"
+    }
+},
+
+{
+    "model": "predcar.Mark",
+    "pk": 21,
+    "fields": {
+        "name": "Toyota"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 22,
+    "fields": {
+        "name": "Volkswagen"
+    }
+},
+{
+    "model": "predcar.Mark",
+    "pk": 23,
+    "fields": {
+        "name": "Volvo"
+    }
+}
+
+
+]

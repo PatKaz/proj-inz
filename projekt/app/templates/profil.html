@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+           
+{% if user.is_authenticated %}
+<hr class="my-4">
+    <h3 class="text-center">Mój profil</h3>
+    <hr class="my-4">
+{% endif %}<div class="profil"></div>
+
+<h5>Login: {{ user.username }}</h5>
+<h5>Email: {{ user.email }}</h5>
+<h5>Imię:  {{ user.first_name }}</h5>
+<h5>Nazwisko: {{ user.last_name }}</h5>
+{% if not user.has_usable_password %}
+{% else %}
+<p></p>
+<hr class="my-4">
+<div class="text-center">
+<a class="btn btn-dark"href="{% url 'edit' %}">Edytuj profil</a>
+</div>
+{% endif %}
+    {% endblock %}

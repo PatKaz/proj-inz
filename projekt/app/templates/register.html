@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}
+Rejestracja
+{% endblock %}
+{% block content %}
+           
+<h4 class="text-left">Rejestracja urzytkownika</h4>
+<hr class="my-4">
+<form method="POST" action="{% url 'register' %}">
+    {% csrf_token %}
+
+    <div class="form-group2">
+        
+
+    {{ form.as_p }}
+
+</div >
+
+    <input type="submit" value="Zarejestruj" class="btn btn-dark">
+    <hr class="my-4">
+    <div class="text-left mb-2"> Zakładając konto akceptujesz 
+        <a href="{% url 'reg' %}">regulamin</a> oraz <a href="{% url 'pp' %}">politykę prywatności.</a>
+      </div>
+</form>
+    {% endblock %}

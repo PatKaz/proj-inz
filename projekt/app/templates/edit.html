@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+       
+
+
+
+<form method="POST" action="{% url 'edit' %}">
+    
+
+        <h2 class="text-left">Edytuj profil</h2>
+    {% csrf_token %}
+    <div class="form-group3">
+    {% if form.errors %}
+    <div class="alert alert-warning alert-dismissible fade show text-center" role="alert"> Nieprawidłowo wypełnione dane formularza 
+        <div data-bs-theme="dark">
+        </div>
+        {% for field in form %}
+            {% if field.errors %}
+            {{ field.errors }}
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+
+    {{ form.as_p }}
+    </div>
+    <input type="submit" value="Edytuj" class="btn btn-dark">
+    <p><small><a href="{% url 'change_password' %}"> Kliknij tutaj</a> żeby zmienić hasło</small></p>
+</div>
+</form>
+    {% endblock %}
