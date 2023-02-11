@@ -65,8 +65,7 @@ def predictor_house(request):
         for key, value in jk.items():
             to_predict[key] = [value]
         loaded_model = xgb.Booster()
-        #dodać prawidłową scieżke do model_sklearn
-        loaded_model.load_model("C:\\Users\\patry\\OneDrive\\Pulpit\\inzzza\\model_sklearn.json")  
+        loaded_model.load_model("C:\\Users\\patry\\OneDrive\\Pulpit\\inzzza\\App\\projekt\\model_pred_house.json")  
         pred = xgb.DMatrix(pd.DataFrame(to_predict)) 
         status=loaded_model.predict(pred)
         status=int(status[0])
@@ -75,3 +74,5 @@ def predictor_house(request):
         print('Nie udało się pobrać modelu')
     context={'status': status,'house': house}
     return render(request, 'predictor_house.html', context)
+
+

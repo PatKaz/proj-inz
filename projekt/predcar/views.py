@@ -80,8 +80,7 @@ def predictor_car(request):
         for key, value in jk.items():
             to_predict[key] = [value]
         loaded_model = xgb.Booster()
-        #dodać prawidłową scieżke do model_car
-        loaded_model.load_model("C:\\Users\\patry\\OneDrive\\Pulpit\\inzzza\\model_car.json")  
+        loaded_model.load_model("C:\\Users\\patry\\OneDrive\\Pulpit\\inzzza\\App\\projekt\\model_pred_car.json")  
         pred = xgb.DMatrix(pd.DataFrame(to_predict)) 
         status=loaded_model.predict(pred)
        

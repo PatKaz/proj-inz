@@ -26,6 +26,7 @@ def login_user(request):
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
+        
         if user is not None:
             login(request, user)
            # messages.success(request,('Zalogowano poprawnie'))
@@ -110,10 +111,12 @@ def contact(request):
             'telephone':telephone,
             'content':content,
         }
-        content='''
-        Wiadomość: {}
 
-        Od: {}
+        content='''
+        Wiadomość od: {}
+        Nr tel: {}
+
+        Treść wiadomości: {}
         '''.format(data['email'],data['telephone'],data['content'])
         send_mail(data['name'], content,'', ['emailapp621@gmail.com'])
         messages.success(request,('Wiadomość została wysłana'))

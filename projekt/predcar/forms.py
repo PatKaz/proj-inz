@@ -11,7 +11,7 @@ class Pred_car_Form(forms.ModelForm):
 
             'year': forms.Select(attrs={ 'class': 'form-control' }),
             'mileage': forms.TextInput(attrs={ 'class': 'form-control' }),
-            'vol_engine': forms.TextInput(attrs={ 'class': 'form-control','placeholder': 'Jeśli wybrałeś silnik Elektyczny wpisz 1' }),
+            'vol_engine': forms.TextInput(attrs={ 'class': 'form-control','placeholder': 'Jeśli wybrałeś silnik elektryczny wpisz 1' }),
 
             'fuel': forms.Select(attrs={ 'class': 'form-select' }),
             'province': forms.Select(attrs={ 'class': 'form-select' }),

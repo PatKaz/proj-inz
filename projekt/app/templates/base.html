@@ -37,8 +37,8 @@
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="navbar-brand mx-auto" href="{% url 'home' %}">Stona główna</a>
                     
-                    <a class="navbar-brand mx-auto"  href="{% url 'profil' %}">Mój profil</a>
-                    <a class="navbar-brand mx-auto" href="{% url 'email' %}">Kontakt</a>
+                    <a id="profil" class="navbar-brand mx-auto"  href="{% url 'profil' %}">Mój profil</a>
+                    <a id="email" class="navbar-brand mx-auto" href="{% url 'email' %}">Kontakt</a>
                     <a class="navbar-brand mx-auto"  href="{% url 'logout' %}">Wyloguj</a>
                     {% endif %}
             

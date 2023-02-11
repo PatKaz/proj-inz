@@ -7,26 +7,24 @@
     {% csrf_token %}
     <div class="form-group3">
         <label for="exampleFormControlInput1">Imię</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1"  name="name">
+        <input id="name" type="text" class="form-control" name="name">
       </div>
         <div class="form-group3">
           <label for="exampleFormControlInput1">Email </label>
-          <input type="email" class="form-control" id="exampleFormControlInput1"   name="email">
+          <input id="email" type="email" class="form-control"  name="email">
         </div>
         <div class="form-group3">
             <label for="exampleFormControlInput1">Nr telefonu</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1"   name="telephone">
+            <input id="phone" type="text" class="form-control"   name="telephone">
           </div>
-        </div>
+        
         
         <div class="form-group3">
           <label for="exampleFormControlTextarea1">Treść wiadomości</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"  name="content"></textarea>
+          <textarea  class="form-control" id="exampleFormControlTextarea1" rows="3"  name="content"></textarea>
         </div><p></p>
         <button type="submit" class="btn btn-dark">Wyślij</button>
-        <div class="text-center mb-2"> Przejdź do 
-            <a href="{% url 'home' %}">Strona główna</a> 
-          </div>
+       
 
 </form>
 <hr class="my-4">

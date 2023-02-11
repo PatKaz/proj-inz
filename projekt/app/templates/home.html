@@ -10,15 +10,15 @@
 <div class="text-center">
   <h4>Witaj w PredApp</h4>
   <hr class="my-4">
-  <p>Dzięki urzyciu aplikacji możesz przewidywać ceny. </p><p>Pamiętaj aby wprowadzać watrości istniejącego produktu,<br> która pozwoli prawidłowo zasymulować cenę.</p>
-    <p>Którą cene chcesz poznac? </p>
+  <p>Dzięki użyciu aplikacji możesz poznać <br>orientacyjną cenę wybranego modelu samochodu<br> lub dowiedzieć się, ile będziesz musiał<br>zapłacić za wynajem mieszkania w Warszawie.<br> Przejdź do symulacji! 
+    </p>
 <div class="mb-2">
-  <button type="submit" class="btn  btn-block text-uppercase">
-      <a  class="btn btn-dark"  href="{% url 'predcar:add' %}">Ceny samochodów</a>
+  <button type="submit"  class="btn  btn-block text-uppercase">
+      <a  class="btn btn-dark" id="car"  href="{% url 'predcar:add' %}">Ceny samochodów</a>
   </button>
   <div class="mb-2">
     <button type="submit" class="btn  btn-block text-uppercase">
-        <a  class="btn btn-dark" href="{% url 'predhouse:add' %}">Ceny mieszkań</a>
+        <a  class="btn btn-dark" id="house" href="{% url 'predhouse:add' %}">Ceny mieszkań</a>
     </button>
 
 

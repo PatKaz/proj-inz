@@ -20,7 +20,6 @@ CHOICES_FLOOR=[
 CHOICES_NUM= [(0, 'Nie'),(1, 'Tak')]
 
 
-#dodac usera
 class Pred_house(models.Model):
     area=models.PositiveBigIntegerField( verbose_name="Mertaż",  validators=[ MaxValueValidator(300), MinValueValidator(10)],blank=False)
     room_num=models.PositiveIntegerField(choices=CHOICES_ROOM_NUM,blank=False, verbose_name="Liczba pokoi")
